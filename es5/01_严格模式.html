@@ -24,6 +24,41 @@
 -->
 
 <script type="text/javascript">
+  //'use strict'
+
+  //1.必须用var声明变量
+  function demo() {
+    a = 1
+    //console.log(a)
+  }
+  demo()
+  //console.log(a)
+  
+  //2.禁止自定义的函数中的this指向window
+  function Person(name,age) {
+    console.log(this)
+    this.name = name
+    this.age = age
+  }
+  //var p = new Person('kobe',18)
+  //console.log(p)
+  //Person('kobe',18)
+  //console.log(age)
+  
+  //3.创建eval作用域
+  //eval('alert(1);console.log(1)')
+  eval('var a = 2;console.log(a)')
+  console.log(a)
+  
+  //4.对象不能有重名的属性
+  var obj = {
+    name:'kobe',
+    age:18,
+    name:'wade'
+  }
+  console.log(obj.name)
+  
+  
 
 
 </script>
