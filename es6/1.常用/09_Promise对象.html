@@ -47,7 +47,7 @@
 <script type="text/javascript">
   
   //回调地狱
-/*setTimeout(()=>{
+setTimeout(()=>{
     console.log('我是第1次请求回来的信息')
       setTimeout(()=>{
         console.log(`我是第2次请求回来的信息`)
@@ -55,7 +55,7 @@
           console.log(`我是第3次请求回来的信息`)
         },1000)
       },1000)
-},1000)*/
+},1000)
 
 
   //实例一个Promise对象
@@ -100,7 +100,7 @@
  //第一次请求
   senAjax(1)
     .then(()=>{
-      //return senAjax(2)
+      return senAjax(2)
       //then方法如果我们不手动返回Promise实例，程序会自动返回Promise实例，并且是成功状态
     })
     .then(()=>{

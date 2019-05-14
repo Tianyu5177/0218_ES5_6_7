@@ -9,7 +9,7 @@
   Symbol：
     概念：ES6中的添加了一种原始数据类型symbol
     已有的数据类型：
-      基本类型：String, Number, boolean, null, undefined
+      基本类型：String, Number, boolean, null, undefined,symbol
       对象类型：一般对象、函数对象、数组对象
     特点：
       1、Symbol属性对应的值是唯一的，可用于“保护”对象属性
@@ -29,6 +29,20 @@
 -->
 
 <script type="text/javascript">
+  
+  var a = Symbol()
+  var b = Symbol()
+  console.log(a === b);
+  console.log(a + 'ok')
+  
+  let name = Symbol()
+  let age = Symbol()
+  
+  var person = {}
+  person[name] = 'kobe'
+  person[age] = 18
+  
+  console.log(person)
 
 </script>
 
