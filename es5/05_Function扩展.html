@@ -14,6 +14,25 @@
   * bind()是将函数返回
 -->
 <script type="text/javascript">
+  
+  var p1 = {
+    name:'kobe',
+    age:18
+  }
+  
+  var p2 = {
+    name:'chenliangtong',
+    age:20
+  }
+  
+  function demo() {
+    console.log(this.name,this.age)
+  }
+  demo.call(p1)
+  demo.call(p2)
+  
+  var demo2 = demo.bind(p2)
+  demo2()
 
 </script>
 </body>

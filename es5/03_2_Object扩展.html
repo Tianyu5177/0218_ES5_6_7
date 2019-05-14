@@ -12,7 +12,21 @@
     * set 扩展属性名(){} 用来监视当前属性值变化的回调函数
 -->
 <script type='text/javascript'>
-
+  var person = {
+    firstName:'小猪',
+    lastName:'佩奇',
+    get fullName(){
+      return this.firstName + ' ' + this.lastName
+    },
+    set fullName(value){
+      var name = value.split(' ')
+      this.firstName = name[0]
+      this.lastName = name[1]
+    }
+  }
+  
+  person.fullName = '小狗 丹尼'
+  console.log(person)
 </script>
 </body>
 </html>
