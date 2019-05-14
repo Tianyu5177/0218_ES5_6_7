@@ -17,17 +17,17 @@
 
 <script type="text/javascript">
   
-  console.log(NaN === NaN)//false
-  console.log(0 === -0)//true
-  console.log(Object.is(NaN,NaN))//true
-  console.log(Object.is(0,-0))//false
+  console.log(NaN === NaN)
+  console.log(0 === -0)
+  console.log(Object.is(NaN,NaN))
+  console.log(Object.is(0,-0))
 
   /*总结：
       多数情况下Object.is等价于“===”，
       但对于NaN、0、0、 -0，则和 “===” 不同
       代码举例如下：
   */
-  console.log(1 === 1) // true
+  /*console.log(1 === 1) // true
   console.log(Object.is(1, 1)); // true
 
   console.log('a' === 'a'); // true
@@ -50,7 +50,7 @@
   console.log(Object.is(0, -0))//false
 
   console.log(-0 === +0) // true
-  console.log(Object.is(-0, +0)) // false
+  console.log(Object.is(-0, +0)) // false*/
   
   let obj = {}
   let obj2 = {name:'kobe',age:12}
