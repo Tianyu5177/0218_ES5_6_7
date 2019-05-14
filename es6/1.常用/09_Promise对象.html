@@ -55,26 +55,61 @@
           console.log(`我是第3次请求回来的信息`)
         },1000)
       },1000)
-  },1000)*/
+},1000)*/
 
 
-var myPromise = new Promise(function (resolve,reject) {
+  //实例一个Promise对象
+  /*let myPromise = new Promise((resolve,reject)=> {
   setTimeout(()=>{
     console.log('我是第1次请求回来的信息')
-    //resolve()
-    reject()
+    resolve(null)//回调函数成功了，会调用resolve
+    //reject('err')
   },1000)
-})
+})*/
 
-  console.log(myPromise)//初始化状态
-  
-  myPromise.then(()=>{
+  //检测状态的第一种写法
+  /*myPromise.then((data)=>{
   //成功了，执行这里的代码
+    console.log(data)
     console.log('刚才的请求成功了')
-  },()=>{
+  },(err)=>{
   //失败，执行这里的代码
-    console.log('刚才的请求失败了')
+    console.log(err)
+  })*/
+
+  //检测状态的第二种写法
+ /* myPromise
+    .then((data)=>{
+      console.log('成功了',data)
+    })
+    .catch((err)=>{
+      console.log(err)
+    })*/
+ 
+ //模拟一个发送ajax请求的函数
+ function senAjax(i) {
+    let myPromise = new Promise((resolve,reject)=>{
+      setTimeout(()=>{
+        console.log(`第${i}次的请求成功了！`)
+        resolve()
+      },1000)
+    })
+   return myPromise
+ }
+
+ //第一次请求
+  senAjax(1)
+    .then(()=>{
+      //return senAjax(2)
+      //then方法如果我们不手动返回Promise实例，程序会自动返回Promise实例，并且是成功状态
+    })
+    .then(()=>{
+    return senAjax(3)
   })
+  
+ 
+ 
+
 
 
 </script>
