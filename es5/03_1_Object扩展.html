@@ -81,14 +81,15 @@ for (var index in demo){
       }
     },
     //如下代码会产生死循环
-    /*sex:{
+    sex:{
       get:function () {
         return this.sex
       },
+      //修改sex
       set:function (value) {
         this.sex = value
       }
-    }*/
+    }
   })
   
   person.sex = '男'
