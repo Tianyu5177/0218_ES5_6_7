@@ -19,6 +19,23 @@
 4. findIndex(function(value, index){return true}) : 找出第一个满足条件返回true的元素【下标】
 -->
 <script type="text/javascript">
+  function demo() {
+    Array.from(arguments).forEach((item,index)=>{
+      console.log(item)
+    })
+  }
+  demo(1,2,3)
+  
+  let a = Array.of(1,2,3,'atguigu')
+  console.log(a);
+  
+  let arr = [1,2,3,4]
+  
+  let arr2 =arr.findIndex(function (item,index) {
+    return item > 2
+  })
+  console.log(arr2)
+
 
 </script>
 </body>
