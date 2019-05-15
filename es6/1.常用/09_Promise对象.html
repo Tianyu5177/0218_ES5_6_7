@@ -59,32 +59,32 @@ setTimeout(()=>{
 
 
   //实例一个Promise对象
-  /*let myPromise = new Promise((resolve,reject)=> {
+  let myPromise = new Promise((resolve,reject)=> {
   setTimeout(()=>{
     console.log('我是第1次请求回来的信息')
     resolve(null)//回调函数成功了，会调用resolve
     //reject('err')
   },1000)
-})*/
+})
 
   //检测状态的第一种写法
-  /*myPromise.then((data)=>{
+  myPromise.then((data)=>{
   //成功了，执行这里的代码
     console.log(data)
     console.log('刚才的请求成功了')
   },(err)=>{
   //失败，执行这里的代码
     console.log(err)
-  })*/
+  })
 
   //检测状态的第二种写法
- /* myPromise
+  myPromise
     .then((data)=>{
       console.log('成功了',data)
     })
     .catch((err)=>{
       console.log(err)
-    })*/
+    })
  
  //模拟一个发送ajax请求的函数
  function senAjax(i) {
