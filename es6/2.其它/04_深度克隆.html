@@ -118,6 +118,7 @@
     for (let key in target){
       let item = target[key]
       if(getType(item) ===  'Object'||'Array'){
+        //“拆到不能再拆”
         result[key] = deepClone(item)
       }else{
         result[key] = item
