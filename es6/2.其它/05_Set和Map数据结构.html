@@ -29,7 +29,12 @@
   
   let set = new Set([1,2,3,4,3,2,1,6]);
   
-  //关于set容器的使用：
+  //使用set容器完成数组的去重
+  let arr0 = [1,2,3,4,3,2,1,6]
+  Array.from(new Set(arr0));
+
+
+  /*//关于set容器的使用：
   //1.set ------->新增
   console.log(set);
   set.add('abc');
@@ -70,8 +75,8 @@
   console.log(map.has('sex'));//fasle
 
   map.clear();//清空
-  console.log(map);//Map(0) {}*!/*/
- 
+  console.log(map);//Map(0) {}*!/!*!/
+ */
 </script>
 </body>
 
